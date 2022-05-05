@@ -1,0 +1,10 @@
+Host bb_bastion
+  Hostname 52.61.61.168
+  User ec2-user
+  IdentityFile ~/.ssh/bb-dev-andyg.pem
+
+Host bb_server
+  Hostname 10.0.11.216
+  User ec2-user
+  ProxyJump bb_bastion
+  IdentityFile ~/.ssh/bb-dev-andyg.pem

@@ -5,5 +5,5 @@
 resource "aws_autoscaling_attachment" "pool" {
   for_each               = toset(var.elb_target_group_arns)
   autoscaling_group_name = var.pool_asg_id
-  alb_target_group_arn   = each.value
+  lb_target_group_arn   = each.value
 }
