@@ -10,9 +10,9 @@ metadata:
   namespace: bigbang
 spec:
   interval: 1m
-  url: https://replace-with-your-git-repo.git
+  url: https://github.com/andygodish/infrastructure-rke2-bigbang-terraform.git
   ref:
-    branch: replace-with-your-branch
+    branch: test-deploy
   secretRef:
     name: private-git
 ---
