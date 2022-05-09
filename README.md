@@ -3,8 +3,9 @@
 ## Commands
 
 aws s3 cp s3://bb-dev-andyg-lkq-rke2/rke2.yaml ~/.kube/config
+export KUBECONFIG=~/.kube/config
 
-sshuttle -vr bb_bastion --dns 10.0.0.0/16 --ssh-cmd 'ssh -i ~/.ssh/bb-dev-andyg-lkq-rke2.pem'
+sshuttle -vr bb_bastion --dns 10.0.0.0/16 --ssh-cmd 'ssh -i ~/.ssh/bb-dev-andyg.pem'
 
 ```
 export CNAME="bb-dev-andyg"
@@ -52,3 +53,17 @@ gpg --quick-set-expire ${fp} 1y
 # Different command for linux
 sed -i "" "s/pgp: FALSE_KEY_HERE/pgp: ${fp}/" .sops.yaml
 ```
+
+#### SOPS Tips --- EDIT THIS***
+
+```
+sudo ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl
+echo 'export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"' >> ~/.bashrc
+tail ~/.bashrc
+source ~/.bashrc
+```
+
+## GitOps Configuration
+
+bigbang.yaml --> fluxcd GitRepository resource needs to be updated with your repo information. 
+

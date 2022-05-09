@@ -1,5 +1,5 @@
 Host bb_bastion
-  Hostname 52.61.61.168
+  Hostname 3.32.33.128 
   User ec2-user
   IdentityFile ~/.ssh/bb-dev-andyg.pem
 
